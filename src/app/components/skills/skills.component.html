@@ -1,0 +1,50 @@
+<section>
+  <h2>Skills</h2>
+
+  <mat-grid-list rowHeight="1:3" cols="3" class="grid-layout-custom" gutterSize="5px">
+    <mat-grid-tile>
+      <mat-grid-tile-header>
+        <h3><strong>Backend</strong></h3>
+      </mat-grid-tile-header>
+      <ng-container *ngFor="let skill of getSkillsByGroup(SkillGroup.backend)" class="skill-card">
+        <div class="skill-content">
+          <img ngSrc="{{skill.icon}}" alt="{{skill.altIcon}}" [width]="50" [height]="50">
+          <div class="skill-details">
+            <h4>{{ skill.title }}</h4>
+            <p>{{ skill.description }}</p>
+          </div>
+        </div>
+      </ng-container>
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+      <mat-grid-tile-header>
+        <h3><strong>Frontend</strong></h3>
+      </mat-grid-tile-header>
+      <ng-container *ngFor="let skill of getSkillsByGroup(SkillGroup.frontend)" class="skill-card">
+        <div class="skill-content">
+          <img ngSrc="{{skill.icon}}" alt="{{skill.altIcon}}" [width]="5" [height]="5">
+          <div class="skill-details">
+            <h4>{{ skill.title }}</h4>
+            <p>{{ skill.description }}</p>
+          </div>
+        </div>
+      </ng-container>
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+      <mat-grid-tile-header>
+        <h3><strong>Others</strong></h3>
+      </mat-grid-tile-header>
+      <ng-container *ngFor="let skill of getSkillsByGroup(SkillGroup.others)" class="skill-card">
+        <div class="skill-content">
+          <img ngSrc="{{skill.icon}}" alt="{{skill.altIcon}}" [width]="5" [height]="5">
+          <div class="skill-details">
+            <h4>{{ skill.title }}</h4>
+            <p>{{ skill.description }}</p>
+          </div>
+        </div>
+      </ng-container>
+    </mat-grid-tile>
+  </mat-grid-list>
+</section>
