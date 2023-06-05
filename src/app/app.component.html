@@ -1,15 +1,37 @@
-<mat-toolbar color="primary">
-  <span>Nicolas Francisco Corvi</span>
-  <nav>
-    <a mat-button routerLink="/about" routerLinkActive="active">About</a>
-    <a mat-button routerLink="/projects" routerLinkActive="active">Projects</a>
-    <a mat-button routerLink="/skills" routerLinkActive="active">Skills</a>
-    <a mat-button routerLink="/contact" routerLinkActive="active">Contact</a>
-  </nav>
-</mat-toolbar>
+<div>
+  <mat-toolbar>
+    <div fxShow="true" fxHide.gt-sm="true">
+      <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+    </div>
 
-<router-outlet></router-outlet>
+    <a routerLink="/about"><span>Nicolas Corvi WebDev</span></a>
+    <div fxShow="true" fxHide.lt-md="true">
+      <nav>
+        <a mat-button routerLink="/about">About</a>
+        <a mat-button routerLink="/projects">Projects</a>
+        <a mat-button routerLink="/skills">Skills</a>
+        <a mat-button routerLink="/contact">Contact me</a>
+      </nav>
+    </div>
 
+  </mat-toolbar>
+  <mat-sidenav-container fxFlexFill class="example-container">
+
+    <mat-sidenav #sidenav fxLayout="column" mode="over" opened="false" fxHide.gt-sm="true">
+      <div fxLayout="column">
+        <a mat-button routerLink="/about">About</a>
+        <a mat-button routerLink="/projects">Projects</a>
+        <a mat-button routerLink="/skills">Skills</a>
+        <a mat-button routerLink="/contact">Contact me</a>
+      </div>
+    </mat-sidenav>
+    <mat-sidenav-content fxFlexFill>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
 <footer>
   <p>&copy; 2023 Nicolas Francisco Corvi</p>
 </footer>
