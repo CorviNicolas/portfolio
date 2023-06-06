@@ -2,11 +2,23 @@ import {Component, OnInit} from '@angular/core';
 import {Skill} from "../../models/skill.model";
 import {SkillGroup} from "../../models/skill-group.model";
 import {SkillsService} from "../../services/skills.service";
+import {animate, query, stagger, style, transition, trigger} from "@angular/animations";
 
 @Component({
   selector: 'app-skills',
   templateUrl: './skills.component.html',
-  styleUrls: ['./skills.component.sass']
+  styleUrls: ['./skills.component.sass'],
+  animations: [
+    trigger('slideInOut', [
+      transition(':enter', [
+        query('mat-grid-tile',[style({transform: 'translateY(-100%)'}),
+        stagger(50, animate('200ms ease-in', style({transform: 'translateY(0%)'})))
+      ])]),
+      transition(':leave', [
+        query('mat-grid-tile', animate('200ms ease-in', style({transform: 'translateY(-100%)'})))
+      ])
+    ])
+  ]
 })
 export class SkillsComponent implements OnInit {
   skills: Skill[] = [];

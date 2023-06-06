@@ -2,9 +2,9 @@
   <h2>Skills</h2>
 
   <mat-grid-list [cols]="gridColumnQuantity" (window:resize)="onResize($event)"
-  >
+                 @slideInOut>
     <ng-container *ngFor="let skill of skills">
-      <mat-grid-tile>
+      <mat-grid-tile >
         <img ngSrc="{{skill.icon}}" alt="{{skill.altIcon}}" height="48" width="48">
         <h6> {{skill.title}}</h6>
       </mat-grid-tile>
