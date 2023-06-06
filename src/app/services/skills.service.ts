@@ -19,7 +19,10 @@ export class SkillsService {
     return [
       new Skill("Java", SkillGroup.backend, "Java developer", "assets/java-icon.png", "Java"),
       new Skill("Spring Framework", SkillGroup.backend, "Spring Framework", "assets/spring-icon.png", "Spring"),
-      new Skill("Spring Boot", SkillGroup.backend, "Spring Boot", "assets/spring-boot-icon.png", "Spring Boot")
+      new Skill("Spring Boot", SkillGroup.backend, "Spring Boot", "assets/spring-boot-icon.png", "Spring Boot"),
+      new Skill("Spring Security", SkillGroup.backend, "Spring Security", "assets/security-icon.png", "Security"),
+      new Skill("Spring Data", SkillGroup.backend, "Spring Data", "assets/spring-data-icon.png", "Spring Data"),
+      new Skill("Spring Cloud", SkillGroup.backend, "Spring Cloud", "assets/spring-cloud-icon.png", "Spring Cloud"),
     ]
   }
 
@@ -40,8 +43,11 @@ export class SkillsService {
       new Skill("API Rest", SkillGroup.others, "API Rest", "assets/rest-api.png", "API Rest"),
       new Skill("AWS", SkillGroup.others, "Amazon Web Services", "assets/aws-icon.png", "AWS"),
       new Skill("Git", SkillGroup.others, "GIT", "assets/git-icon.png", "Git"),
-      new Skill("Github Workflows", SkillGroup.others, "Github", "assets/github-icon.png", "Github")
-
+      new Skill("Github Workflows", SkillGroup.others, "Github", "assets/github-icon.png", "Github"),
+      new Skill("JavaFX", SkillGroup.others, "JavaFX", "assets/javafx-icon.png", "JavaFX"),
+      new Skill("JWT", SkillGroup.others, "JWT", "assets/jwt-icon.png", "JWT"),
+      new Skill("MongoDB", SkillGroup.others, "MongoDB", "assets/mongo-icon.png", "MongoDB"),
+      new Skill("RabbitMQ", SkillGroup.others, "RabbitMQ", "assets/rabbitmq-icon.png", "RabbitMQ")
     ];
   }
 }
