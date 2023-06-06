@@ -12,7 +12,7 @@ import {animate, query, stagger, style, transition, trigger} from "@angular/anim
     trigger('slideInOut', [
       transition(':enter', [
         query('mat-grid-tile',[style({transform: 'translateY(-100%)'}),
-        stagger(50, animate('200ms ease-in', style({transform: 'translateY(0%)'})))
+        stagger(25, animate('200ms ease-in', style({transform: 'translateY(0%)'})))
       ])]),
       transition(':leave', [
         query('mat-grid-tile', animate('200ms ease-in', style({transform: 'translateY(-100%)'})))
@@ -22,6 +22,7 @@ import {animate, query, stagger, style, transition, trigger} from "@angular/anim
 })
 export class SkillsComponent implements OnInit {
   skills: Skill[] = [];
+  selectedSkills: Skill[] = [];
   gridColumnQuantity: number = 0;
 
   constructor(private skillsService: SkillsService) {
@@ -29,6 +30,7 @@ export class SkillsComponent implements OnInit {
 
   ngOnInit(): void {
     this.skills = this.skillsService.getSkills();
+    this.selectedSkills = this.skills;
     this.setColumnQuantity(window.innerWidth);
   }
 
@@ -56,5 +58,14 @@ export class SkillsComponent implements OnInit {
     let result: Skill[] = this.skills.filter(s => s.group === group);
     console.log(result);
     return result;
+  }
+
+  chipListChange(event:any){
+    let selected: SkillGroup | string | any = event.value;
+    if(selected === undefined || selected === 'All'){
+      this.selectedSkills = this.skills;
+    } else {
+      this.selectedSkills = this.getSkillsByGroup(selected);
+    }
   }
 }

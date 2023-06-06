@@ -8,6 +8,7 @@ import {MatIconModule} from "@angular/material/icon";
 import {MatGridListModule} from "@angular/material/grid-list";
 import {FlexLayoutModule} from "@angular/flex-layout";
 import {MatSidenavModule} from "@angular/material/sidenav";
+import {MatChipsModule} from "@angular/material/chips";
 
 @NgModule({
   exports: [
@@ -19,7 +20,8 @@ import {MatSidenavModule} from "@angular/material/sidenav";
     MatIconModule,
     MatGridListModule,
     FlexLayoutModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatChipsModule
   ]
 })
 export class MaterialModules {
