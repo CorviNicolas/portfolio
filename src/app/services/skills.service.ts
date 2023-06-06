@@ -18,19 +18,30 @@ export class SkillsService {
   backendSkills(): Skill[] {
     return [
       new Skill("Java", SkillGroup.backend, "Java developer", "assets/java-icon.png", "Java"),
-      new Skill("Spring Boot", SkillGroup.backend, "Sring Boot", "assets/spring-boot-icon.png", "Spring Boot")
+      new Skill("Spring Framework", SkillGroup.backend, "Spring Framework", "assets/spring-icon.png", "Spring"),
+      new Skill("Spring Boot", SkillGroup.backend, "Spring Boot", "assets/spring-boot-icon.png", "Spring Boot")
     ]
   }
 
   frontEndSkills(): Skill[] {
     return [
-      new Skill("frontendSkill", SkillGroup.frontend, "skill de frontend", "icono", "angular"),
+      new Skill("Angular", SkillGroup.frontend, "Angular", "assets/angular-icon.png", "Angular"),
+      new Skill("HTML", SkillGroup.frontend, "HTML", "assets/html-icon.png", "HTML"),
+      new Skill("CSS", SkillGroup.frontend, "CSS", "assets/css-icon.png", "CSS"),
+      new Skill("Typescript", SkillGroup.frontend, "Typescript", "assets/typescript-icon.png", "Typescript"),
+
     ];
   }
 
   othersSKills(): Skill[]{
     return [
-      new Skill("otherSkill", SkillGroup.others, "other skill", "icon", "SQL")
+      new Skill("Oracle Database", SkillGroup.others, "Oracle Database", "assets/oracle-icon.png", "Oracle"),
+      new Skill("Docker", SkillGroup.others, "Docker", "assets/docker-icon.png", "Docker"),
+      new Skill("API Rest", SkillGroup.others, "API Rest", "assets/rest-api.png", "API Rest"),
+      new Skill("AWS", SkillGroup.others, "Amazon Web Services", "assets/aws-icon.png", "AWS"),
+      new Skill("Git", SkillGroup.others, "GIT", "assets/git-icon.png", "Git"),
+      new Skill("Github Workflows", SkillGroup.others, "Github", "assets/github-icon.png", "Github")
+
     ];
   }
 }
