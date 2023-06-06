@@ -7,4 +7,19 @@ import { Component } from '@angular/core';
 })
 export class ContactComponent {
 
+  constructor() {
+  }
+
+  italianCV(){
+    window.open("assets/cvs/CV Corvi IT.pdf")
+  }
+
+  englishCV(){
+    window.open("assets/cvs/CV Corvi English.pdf")
+  }
+
+  spanishCV(){
+    window.open("assets/cvs/CV Corvi.pdf")
+
+  }
 }

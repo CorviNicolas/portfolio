@@ -1,4 +1,5 @@
-.hero-main
+
+.about-main
   align-items: center
   display: flex
   gap: 10rem
@@ -6,27 +7,38 @@
   position: relative
   padding: 0 5rem
 
-.hero-text
+.about-text
   display: flex
   flex-direction: column
   max-width: 50rem
   position: relative
 
-.hero-text h1
+
+/* Mobile */
+@media only screen and (max-width: 480px)
+  .about-main
+    flex-direction: column
+
+/* Tablet & resized browser */
+@media only screen and (min-width: 481px) and (max-width: 1022px)
+  .about-main
+    flex-direction: column
+
+.about-text h1
   color: #2d2e32
   font-size: 5.5rem
   line-height: 1.2
   margin-bottom: 2rem
   margin-top: 2rem
 
-.hero-text p
+.about-text p
   color: #555
   font-family: Mulish,sans-serif
   font-size: 1.2rem
   font-weight: 500
   line-height: 1.6
 
-.hero-img
+.about-img
   background-image: url(/static/media/pfp_webp.f334283842f7b24cafd1.webp)
   background-position: 50%
   background-size: cover
@@ -35,7 +47,11 @@
   height: 35rem
   position: relative
   width: 35rem
+  min-width: 50%
 
 a
   padding: 5px
   color: inherit
+
+.contact-icons
+  margin-top: 5rem
