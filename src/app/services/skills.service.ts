@@ -31,6 +31,7 @@ export class SkillsService {
       new Skill("Angular", SkillGroup.frontend, "Angular", "assets/angular-icon.png", "Angular"),
       new Skill("HTML", SkillGroup.frontend, "HTML", "assets/html-icon.png", "HTML"),
       new Skill("CSS", SkillGroup.frontend, "CSS", "assets/css-icon.png", "CSS"),
+      new Skill("Sass", SkillGroup.frontend, "Sass", "assets/sass-icon.png", "Sass"),
       new Skill("Typescript", SkillGroup.frontend, "Typescript", "assets/typescript-icon.png", "Typescript"),
 
     ];
