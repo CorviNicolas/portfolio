@@ -38,12 +38,13 @@ export class SkillsService {
 
   othersSKills(): Skill[]{
     return [
-      new Skill("Oracle Database", SkillGroup.others, "Oracle Database", "assets/oracle-icon.png", "Oracle"),
+      new Skill("SQL", SkillGroup.others, "SQL", "assets/sql-icon.png", "SQL"),
       new Skill("Docker", SkillGroup.others, "Docker", "assets/docker-icon.png", "Docker"),
       new Skill("API Rest", SkillGroup.others, "API Rest", "assets/rest-api.png", "API Rest"),
       new Skill("AWS", SkillGroup.others, "Amazon Web Services", "assets/aws-icon.png", "AWS"),
       new Skill("Git", SkillGroup.others, "GIT", "assets/git-icon.png", "Git"),
       new Skill("Github Workflows", SkillGroup.others, "Github", "assets/github-icon.png", "Github"),
+      new Skill("Stored Procedures", SkillGroup.others, "Stored procedures", "assets/stored-procedure-icon.png", "Storec procedure"),
       new Skill("JavaFX", SkillGroup.others, "JavaFX", "assets/javafx-icon.png", "JavaFX"),
       new Skill("JWT", SkillGroup.others, "JWT", "assets/jwt-icon.png", "JWT"),
       new Skill("MongoDB", SkillGroup.others, "MongoDB", "assets/mongo-icon.png", "MongoDB"),
