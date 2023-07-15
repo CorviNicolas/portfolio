@@ -11,7 +11,7 @@ export class ProjectsComponent {
 
   constructor() {
     this.projects = [
-      new Project("My website", "This is my website", "", "#", true, true),
+      new Project("My website", "This is my website", "https://github.com/CorviNicolas/portfolio", "#", true, true),
       new Project("Sample", "Sample", "", "#", false, false)
 
     ];
