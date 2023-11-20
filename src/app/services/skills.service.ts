@@ -41,6 +41,7 @@ export class SkillsService {
     return [
       new Skill("SQL", SkillGroup.others, "SQL", "assets/sql-icon.png", "SQL"),
       new Skill("Docker", SkillGroup.others, "Docker", "assets/docker-icon.png", "Docker"),
+      new Skill("OpenShift", SkillGroup.others, "OpenShift", "assets/openshift-icon.png", "OpenShift"),
       new Skill("API Rest", SkillGroup.others, "API Rest", "assets/rest-api.png", "API Rest"),
       new Skill("Cloud Services", SkillGroup.others, "Web Services", "assets/cloud-services.png", "Cloud"),
       new Skill("Git", SkillGroup.others, "GIT", "assets/git-icon.png", "Git"),
