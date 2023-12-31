@@ -51,7 +51,7 @@ jobs:
       - name: Use Firebase Dev
         shell: bash
         run: |
-          firebase use dev --debug
+          firebase use nicolas-corvi-webdev --debug
 
       - name: Deploy Firebase functions
         shell: bash
