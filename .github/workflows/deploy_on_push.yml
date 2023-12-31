@@ -55,7 +55,7 @@ jobs:
 
       - name: Deploy Firebase functions
         shell: bash
-        run: firebase deploy --only portfolio --non-interactive --debug
+        run: firebase deploy
 
       - name: Remove credentials file
         if: always()
