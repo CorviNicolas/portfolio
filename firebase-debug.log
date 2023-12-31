@@ -1,0 +1,17 @@
+[debug] [2023-12-31T22:39:30.111Z] ----------------------------------------------------------------------
+[debug] [2023-12-31T22:39:30.115Z] Command:       C:\Users\nicoc\OneDrive\ESCRIT~1\PROGRA~1\FireBase\firebase-tools-instant-win.exe C:\Users\nicoc\.cache\firebase\tools\lib\node_modules\firebase-tools\lib\bin\firebase use nicolas-corvi-webdev --debug
+[debug] [2023-12-31T22:39:30.116Z] CLI Version:   12.1.0
+[debug] [2023-12-31T22:39:30.116Z] Platform:      win32
+[debug] [2023-12-31T22:39:30.116Z] Node Version:  v16.16.0
+[debug] [2023-12-31T22:39:30.117Z] Time:          Sun Dec 31 2023 19:39:30 GMT-0300 (GMT-03:00)
+[debug] [2023-12-31T22:39:30.117Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-12-31T22:39:30.229Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-12-31T22:39:30.230Z] > authorizing via signed-in user (ncorvi94@gmail.com)
+[debug] [2023-12-31T22:39:30.234Z] > refreshing access token with scopes: []
+[debug] [2023-12-31T22:39:30.237Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-12-31T22:39:30.238Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-12-31T22:39:30.532Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2023-12-31T22:39:30.533Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-12-31T22:39:30.555Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/nicolas-corvi-webdev [none]
+[debug] [2023-12-31T22:39:31.087Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/nicolas-corvi-webdev 200
