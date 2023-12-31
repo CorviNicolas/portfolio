@@ -15,11 +15,27 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
+      - name: Cache Dependencies
+        uses: actions/cache@v3
+        id: cache-dependencies
+        with:
+            path: |
+              ~/.npm
+              ~/.cache/firebase
+            key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+            restore-keys: |
+              ${{ runner.os }}-node-
+
       - name: Setup node
         uses: actions/setup-node@v4
         with:
           node-version: 18
-      - run: npm ci
+
+      - name: Install Dependencies
+        shell: bash
+        working-directory: ./functions
+        run: |
+            npm ci
 
       - name: NG Build
         run: npm run build:ci
@@ -32,10 +48,14 @@ jobs:
         run: |
           echo "${{ secrets.GOOGLE_APPLICATIONS_CREDENTIALS_BASE64 }}" | base64 --decode > "google-application-credentials.json"
 
+      - name: Use Firebase Dev
+        shell: bash
+        run: |
+          firebase use dev --debug
 
       - name: Deploy Firebase functions
         shell: bash
-        run: firebase deploy --non-interactive --debug
+        run: firebase deploy --only functions --non-interactive --debug
 
       - name: Remove credentials file
         if: always()
