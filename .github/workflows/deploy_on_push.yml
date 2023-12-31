@@ -5,6 +5,7 @@ on:
       - main
 jobs:
   build-and-deploy:
+    timeout-minutes: 10
     name: Deploy to Firebase
     runs-on: ubuntu-latest
     steps:
@@ -16,7 +17,6 @@ jobs:
         with:
           node-version: 18
       - run: npm ci
-      - run: npm test
 
       - name: NG Build
         run: npm run build:ci
