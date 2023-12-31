@@ -34,7 +34,6 @@ jobs:
 
       - name: Install Dependencies
         shell: bash
-        working-directory: ./portfolio
         run: |
             npm ci
 
