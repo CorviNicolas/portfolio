@@ -4,6 +4,7 @@ on:
     branches:
       - main
 jobs:
+  #https://medium.com/@jankir/how-to-deploy-firebase-functions-in-ci-using-a-service-account-key-with-801be78251cf
   build-and-deploy:
     timeout-minutes: 10
     name: Deploy to Firebase
@@ -14,6 +15,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16
 
       - name: Cache Dependencies
         uses: actions/cache@v3
@@ -26,14 +32,9 @@ jobs:
             restore-keys: |
               ${{ runner.os }}-node-
 
-      - name: Setup node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 18
-
       - name: Install Dependencies
         shell: bash
-        working-directory: ./functions
+        working-directory: ./portfolio
         run: |
             npm ci
 
@@ -55,7 +56,7 @@ jobs:
 
       - name: Deploy Firebase functions
         shell: bash
-        run: firebase deploy --only functions --non-interactive --debug
+        run: firebase deploy --only portfolio --non-interactive --debug
 
       - name: Remove credentials file
         if: always()
