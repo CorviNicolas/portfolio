@@ -35,5 +35,5 @@ jobs:
             auth_token: ${{ secrets.AUTH_TOKEN }}
             to_whatsapp_no: ${{ secrets.TO_WHATSAPP_NUMBER }}
         run:
-          curl -X POST -d "Body=New push to portfolio" -d "From=whatsapp:+14155238886" -d "To=whatsapp:+${{env.to_whatsapp_no}}" "https://api.twilio.com/2010-04-01/Accounts/${{env.account_sid}}/Messages" -u "${{env.account_sid}}:${{env.auth_token}}"
+          curl -X POST -d "Body=New push to portfolio" -d "From=whatsapp:+14155238886" -d "To=whatsapp:\+${{env.to_whatsapp_no}}" "https://api.twilio.com/2010-04-01/Accounts/${{env.account_sid}}/Messages" -u "${{env.account_sid}}:${{env.auth_token}}"
 
